@@ -1,0 +1,6 @@
+*.pyc
+.idea
+*.log
+tools
+unitest
+test

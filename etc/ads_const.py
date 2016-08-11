@@ -1,0 +1,132 @@
+# -*- coding: utf-8 -*-
+
+__author__ = 'return'
+
+
+#######################################################
+# basic config
+
+LOG_CONFIG_FILE = 'etc/log.config'
+LOG_CONFIG_FILE_NAME_PATTERN = '{%args%}'
+
+
+#######################################################
+# event const
+
+EVENT_TYPE_GAME_USER_EVENT = 1
+EVENT_TYPE_ACTIVATE_EVENT = 2
+
+
+#######################################################
+# resource const
+
+RESOURCE_TASK_CENTER = 'task_center'
+RESOURCE_TASK_SCHED = 'task_scheduler'
+RESOURCE_EVENT_CENTER = 'event_center'
+RESOURCE_COLLECT_PROCESSOR = 'collect_processor'
+RESOURCE_GAME_PROCESSOR = 'game_processor'
+RESOURCE_ACTIVATE_PROCESSOR = 'activate_processor'
+RESOURCE_LOG_MONITOR = 'log_monitor'
+RESOURCE_MONGO_DB_MANAGER = 'mongo_db_manager'
+
+
+#######################################################
+# ads config
+
+ADS_CONFIG_BASE_URL = 'base_url'
+ADS_CONFIG_ACTIVATE_URL = 'activate_url'
+ADS_CONFIG_SYSLOG_PATH = 'syslog_path'
+ADS_CONFIG_COLLECT_USER_IDFA = 'collect_user_idfa'
+ADS_CONFIG_ACTIVATE_PROCESSOR_COUNT = 'activate_processor_count'
+ADS_CONFIG_GAME_USER_PROCESSOR_COUNT = 'game_user_processor_count'
+ADS_CONFIG_CLEAN_IN_HOUR = 'clean_interval'
+ADS_CONFIG_CLEAN_LIMIT_IN_SECOND = 'clean_limit'
+ADS_CONFIG_SIGN_PWD = 'sign_pwd'
+ADS_CONFIG_ADS_DUOMENG_SIGN_KEY = 'ads_duomeng_sign_key'
+
+ADS_CONFIG_DATABASE = 'database'
+ADS_CONFIG_DATABASE_MONGO = 'mongo'
+ADS_CONFIG_DATABASE_REQUEST_TIME = 'request_time'
+ADS_CONFIG_DATABASE_GLOBAL_MONITOR_INTERVAL = 'global_monitor_interval'
+
+#######################################################
+# runtime
+
+ADS_BASE_URL = None
+ADS_ACTIVATE_URL = None
+ADS_SYSLOG_PATH = None
+ADS_APP_VRESION = '1.0'
+ADS_ACTIVATE_PROCESSOR_TASK_COUNT = 1
+ADS_GAME_USER_PROCESSOR_TASK_COUNT = 1
+ADS_COLLECT_USER_IDFA = 0
+
+ADS_DOUMENG_SIGN_KEY = ''
+
+# 定时清理时间 (s)
+ADS_CLEANUP_TIME_INTERVAL = 3
+ADS_CLEANUP_TIME_LIMIT = 3 * 24 * 60 * 60
+
+# 空行sleep间隔
+ADS_READ_LOG_SLEEP_TIME = 0.1
+
+# 全局监控任务执行时间 (min)
+ADS_GLOBAL_MONITOR_INTERVAL = 15
+
+
+########################################################
+# db
+
+IS_MONGO_DB_CONNECTED = False
+
+STATUS_DB_CONNECTED = 1
+STATUS_NOT_CONNECTED = 2
+STATUS_CONNECTION_FAILED = 3
+
+CREATE_COLLECTION_CREATE_SUCC = 4
+CREATE_COLLECTION_ALREADY_EXISTED = 5
+CREATE_COLLECTION_CREATE_FAILED = 6
+
+ADS_DB_NAME = None
+
+ADS_SOURCE_COLLECTION_ADS = 'adsinfo'
+ADS_SOURCE_COLLECTION_SOURCE = 'source'
+ADS_SOURCE_COLLECTION_TIME = 'time'
+ADS_SOURCE_COLLECTION_IS_ACTIVATED = 'activated'
+ADS_SOURCE_COLLECTION_ACTIVATED_TIME = 'activated_time'
+ADS_SOURCE_COLLECTION_MAC = 'mac'
+ADS_SOURCE_COLLECTION_IDFA = 'idfa'
+
+ADS_SOURCE_COLLECTION_DUOMENG_CLICK_IP = 'click_ip'
+ADS_SOURCE_COLLECTION_DUOMENG_ACTIVATE_IP = 'activate_ip'
+ADS_SOURCE_COLLECTION_DUOMENG_SIGN_KEY = 'sign_key'
+ADS_SOURCE_COLLECTION_DUOMENG_APP_VERSION = 'app_version'
+ADS_SOURCE_COLLECTION_DUOMENG_UDID = 'oid'
+ADS_SOURCE_COLLECTION_DUOMENG_APPID = 'appId'
+
+ADS_SOURCE_COLLECTION_ADSAGE_CALLBACK = 'callback'
+
+
+########################################################
+# ads parameters
+
+IOS_DEFAULT_MAC_ADDRESS = '02:00:00:00:00:00'
+IOS_DEFAULT_MAC_ADDRESS_MD5 = '0F607264FC6318A92B9E13C65DB7CD3C'
+
+ADS_SOURCE_ACTIVATE_TYPE = 'active'
+ADS_SOURCE_ACTIVATE_SIGN_TYPE = 'sign'
+ADS_SOURCE_ACTIVATE_SIGN_KEY = ''
+
+ADS_SOURCE_DUOMENG = 'domob'
+ADS_SOURCE_DUOMENG_PARA_APPID = 'appId'
+ADS_SOURCE_DUOMENG_PARA_IDFA = 'ifa'
+
+ADS_SOURCE_PARA_MAC = 'mac'
+ADS_SOURCE_PARA_IDFA = 'idfa'
+ADS_SOURCE_PARA_IP = 'ip'
+ADS_SOURCE_PARA_TIME = 'time'
+ADS_SOURCE_PARA_APP_VERSION = 'appVersion'
+ADS_SOURCE_DUOMENG_PARA_SOURCE = 'source'
+ADS_SOURCE_DUOMENG_PARA_UDID = 'oid'
+
+ADS_SOURCE_ADSAGE = 'adsage'
+ADS_SOURCE_ADSAGE_CALLBACK = 'callback'
